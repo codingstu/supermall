@@ -1,0 +1,43 @@
+<template>
+  <div class="goods">
+    <GoodsListItem
+      v-for="(item, index) in goods"
+      :goodsItem="item"
+    ></GoodsListItem>
+  </div>
+</template>
+
+<script>
+import GoodsListItem from './GoodsListItem.vue'
+export default {
+  name: 'SupermallGoodslist',
+
+  data() {
+    return {}
+  },
+  components: {
+    GoodsListItem,
+  },
+  props: {
+    goods: {
+      type: Array,
+      default() {
+        return []
+      },
+    },
+  },
+  mounted() {},
+
+  methods: {},
+}
+</script>
+
+<style scoped>
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  padding: 2px;
+}
+</style>
